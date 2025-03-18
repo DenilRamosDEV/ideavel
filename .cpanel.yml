@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/siaeesco/ideas.siaees.com
-    - /bin/cp -R * $DEPLOYPATH
+    - /usr/bin/rsync -av --exclude=".git" --exclude=".env" --exclude="storage/" --delete . $DEPLOYPATH
